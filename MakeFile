@@ -1,0 +1,18 @@
+# Assignment 0
+
+EXECUTEABLE := assignment0
+
+SOURCES := *.cpp
+
+INCLUDES := -I ../include
+
+EXT := o
+
+CC := g++
+
+all:
+	$(CC) $(INCLUDES) $(SOURCES) -o $(EXECUTEABLE).$(EXT)
+
+realclean:
+	find . -type f name "*.o" -exec rm '{}' \;
+	find . -type f name "*.exe" -exec rm '{}' \;
